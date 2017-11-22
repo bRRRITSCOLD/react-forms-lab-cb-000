@@ -1,9 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+const React = require('react');
+const ReactDOM = require('react-dom');
 
-import LoginForm from './components/LoginForm';
-import TwitterMessage from './components/TwitterMessage';
-import PoemWriter from './components/PoemWriter';
+const LoginForm = require('./components/LoginForm');
+const TwitterMessage = require('./components/TwitterMessage');
+const PoemWriter = require('./components/PoemWriter');
 
 function login({ username, password }) {
   console.log(`Logging in ${username} with password ${password}`);
@@ -20,5 +20,7 @@ ReactDOM.render(
     <h1><pre>PoemWriter</pre></h1>
     <PoemWriter />
   </div>,
-  document.getElementById('global')
+  document.getElementById('main')
 );
+
+require('./test/index-test.js'); // Leave this in!
